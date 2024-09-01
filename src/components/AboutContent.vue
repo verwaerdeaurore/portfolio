@@ -1,29 +1,49 @@
 <script setup></script>
 
 <template>
-  <div class="flex justify-center mt-10">
-    <a
-      href="#"
-      class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700 m-2 mx-auto"
+  <div class="flex h-screen bg-[#0e1015]">
+    <!-- Colonne de gauche fixe -->
+    <div
+      class="w-1/3 text-white bg-[#13151b] p-10 pt-40 flex flex-col items-center"
     >
       <img
-        class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-64 md:rounded-none m-2"
-        src="/images/images5.jpg"
-        alt=""
+        src="/public/images/idcard.png"
+        alt="Photo de Profil"
+        class="w-52 h-52 rounded mb-4 object-cover"
       />
-      <div class="flex flex-col justify-between p-4 leading-normal">
-        <h5
-          class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
-        >
-          Aurore Verwaerde
-        </h5>
-        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius natus
-          in omnis nemo repellat sequi consequatur ipsa, non aspernatur eligendi
-          dolorum deserunt quis dolores provident sint, enim pariatur ab
-          praesentium?
-        </p>
-      </div>
-    </a>
+      <h1 class="text-xl font-bold mb-4">Nom Prénom</h1>
+      <ul class="space-y-2">
+        <li>
+          <button
+            class="w-full text-left text-[#5bc8d2] hover:text-[#5bc8d2] focus:outline-none"
+            @click="currentSection.value = 'about'"
+          >
+            À propos
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-full text-left text-[#5bc8d2] hover:text-[#5bc8d2] focus:outline-none"
+            @click="currentSection.value = 'skills'"
+          >
+            Compétences
+          </button>
+        </li>
+        <li>
+          <button
+            class="w-full text-left text-[#5bc8d2] hover:text-[#5bc8d2] focus:outline-none"
+            @click="currentSection.value = 'experience'"
+          >
+            Expérience
+          </button>
+        </li>
+        <!-- Ajouter d'autres liens ici -->
+      </ul>
+    </div>
+
+    <!-- Colonne de droite dynamique -->
+    <div class="w-3/4 p-6">
+      <component :is="currentSectionComponent"></component>
+    </div>
   </div>
 </template>

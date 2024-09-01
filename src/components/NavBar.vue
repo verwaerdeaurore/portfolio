@@ -2,16 +2,16 @@
 
 <template>
   <nav
-    class="border-gray-200 bg-fuchsia-200 dark:bg-gray-800 dark:border-gray-700"
+    class="border-gray-200 bg-[#13151b] dark:bg-gray-800 dark:border-gray-700"
   >
     <div
       class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
     >
       <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-        <img src="#" class="h-8" alt="Flowbite Logo" />
+        <img src="/public/images/logo.png" class="h-8" alt="Logo" />
         <span
-          class="self-center text-2xl font-semibold whitespace-nowrap text-pink-950 dark:text-white"
-          >nomdusite</span
+          class="self-center text-2xl font-semibold whitespace-nowrap text-white dark:text-white"
+          >Aurore Verwaerde</span
         >
       </a>
 
@@ -22,16 +22,30 @@
           <li>
             <RouterLink
               to="/"
-              class="block py-2 px-3 md:p-0 text-pink-950 bg-pink-950 rounded md:bg-transparent md:text-pink-950 md:dark:text-pink-950 dark:bg-blue-600 md:dark:bg-transparent"
+              class="block py-2 px-3 md:p-0 hover:border-b-4 hover: border-cyan-500 rounded-none text-white bg-white  md:bg-transparent md:text-white md:dark:text-white dark:bg-blue-600 md:dark:bg-transparent"
               aria-current="page"
-              >Home</RouterLink
+              >accueil</RouterLink
             >
           </li>
           <li>
             <RouterLink
               to="/about"
-              class="block py-2 px-3 md:p-0 text-pink-950 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-              >about</RouterLink
+              class="block py-2 px-3 md:p-0 hover:text-white text-white  hover:border-b-4 hover: border-cyan-500 rounded-none md:hover:bg-transparent md:border-0  dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >à propos</RouterLink
+            >
+          </li>
+          <li>
+            <RouterLink
+              to="/about"
+              class="block py-2 px-3 md:p-0 text-white   hover:text-white hover:border-b-4 hover: border-cyan-500 rounded-none md:hover:bg-transparent md:border-0  dark:text-white  dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >projets</RouterLink
+            >
+          </li>
+          <li>
+            <RouterLink
+              to="/about"
+              class="block py-2 px-3 md:p-0 text-white  hover:text-white hover:border-b-4 hover: border-cyan-500 rounded-none md:hover:text-white dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+              >contact</RouterLink
             >
           </li>
         </ul>
